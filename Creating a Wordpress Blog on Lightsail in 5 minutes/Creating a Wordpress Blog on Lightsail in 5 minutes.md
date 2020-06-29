@@ -17,7 +17,7 @@ Before starting this tutorial, review the [pricing guide](https://aws.amazon.com
   - [Final notes](#final-notes)
 
 
-![](2020-06-28-14-02-38.png)
+![](figs/2020-06-28-14-02-38.png)
 
 ## Part 1. (Option A) Creating your blog via aws cli 
 
