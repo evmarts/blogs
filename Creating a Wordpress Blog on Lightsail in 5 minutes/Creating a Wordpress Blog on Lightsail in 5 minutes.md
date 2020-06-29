@@ -8,14 +8,6 @@ In this post we'll create a barebones WordPress site hosted on Amazon Lightsail.
 
 Before starting this tutorial, review the [pricing guide](https://aws.amazon.com/lightsail/pricing/) for Lightsail. 
 
-- [Creating a WordPress Blog on Lightsail in 5 minutes](#creating-a-wordpress-blog-on-lightsail-in-5-minutes)
-  - [Part 1. (Option A) Creating your blog via aws cli](#part-1-option-a-creating-your-blog-via-aws-cli)
-  - [Part 1. (Option B) Creating your blog via Lightsail Web Console](#part-1-option-b-creating-your-blog-via-lightsail-web-console)
-  - [Part 2. Customizing your blog](#part-2-customizing-your-blog)
-  - [HTTPS and DNS Configuration](#https-and-dns-configuration)
-
-![](https://github.com/evmarts/blogs/raw/master/Creating%20a%20Wordpress%20Blog%20on%20Lightsail%20in%205%20minutes/figs/2020-06-28-14-02-38.png)
-
 ## Part 1. (Option A) Creating your blog via aws cli 
 
 If you do not have [aws cli](https://aws.amazon.com/cli/) installed on your machine, you'll want to follow the steps in the [next section](#part-1-option-b-creating-your-blog-via-lightsail-web-console). 
@@ -43,7 +35,7 @@ aws lightsail get-instance --instance-name wordpress_blog | grep publicIpAddress
 
 </cmd>
 
-> `"publicIpAddress": "34.205.54.197",`
+> ```"publicIpAddress": "34.205.54.197",```
 
 you can enter that public IP address into a browser and load your site:
 
@@ -93,7 +85,7 @@ Enter the following command to get your password:
 sudo cat /home/bitnami/bitnami_credentials
 ```
 
-> `The default username and password is 'user' and '<password>'.`
+> ```The default username and password is 'user' and '<password>'.```
 
 Copy that password and head back to your site. Click the Bitnami `Manage` button in the bottom corner.
 
@@ -119,7 +111,7 @@ That's it - you have a customizable WordPress site!
 
 ## HTTPS and DNS Configuration
 
-We left out HTTPS and DNS configuration in this tutorial. Adding those two things will allow your site to be reachable from a custom URL and will remove any warnings your visitors have about `Not Secure` connections.
+We left out HTTPS and DNS configuration in this tutorial. Configuring those will allow your site to be reachable from a custom URL and will remove any warnings your visitors have about `Not Secure` connections.
 
 ![](https://github.com/evmarts/blogs/raw/master/Creating%20a%20Wordpress%20Blog%20on%20Lightsail%20in%205%20minutes/figs/2020-06-28-13-37-45.png)
 
